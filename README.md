@@ -39,16 +39,16 @@ GitHub Repo: https://github.com/PraveenGPK1206/Smart-Bookmark-App
 ## Screenshots
 
 ### Login Page
-![Login](screenshots/login.png)
+![Login](public/screenshots/login.png)
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](public/screenshots/dashboard.png)
 
 ### Add Bookmark Dialog
-![Add Bookmark](screenshots/add-bookmark.png)
+![Add Bookmark](public/screenshots/add-bookmark.png)
 
 ### Bookmark List
-![Bookmark List](screenshots/bookmark-list.png)
+![Bookmark List](public/screenshots/bookmark-list.png)
 
 ---
 
