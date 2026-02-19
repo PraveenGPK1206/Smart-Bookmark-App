@@ -9,18 +9,19 @@ Users can sign in with Google, add bookmarks, view them in real time, and delete
 ## Live Demo
 
 Deployed on Vercel  
-Live URL: <ADD AFTER DEPLOY>
+Live URL: https://smart-bookmark-app-liart-nine.vercel.app/
 
-GitHub Repo: <ADD REPO LINK>
+GitHub Repo: https://github.com/PraveenGPK1206/Smart-Bookmark-App
 
 ---
 
 ## Tech Stack
 
 - Next.js (App Router)
-- Supabase (Auth + Database + Realtime)
+- Supabase (Auth, Database, Realtime)
 - Tailwind CSS
 - Google OAuth
+- Deployment: Vercel
 
 ---
 
@@ -32,6 +33,22 @@ GitHub Repo: <ADD REPO LINK>
 - Real-time updates without refresh
 - Delete bookmarks
 - Responsive UI
+
+---
+
+## Screenshots
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Add Bookmark Dialog
+![Add Bookmark](screenshots/add-bookmark.png)
+
+### Bookmark List
+![Bookmark List](screenshots/bookmark-list.png)
 
 ---
 
@@ -83,5 +100,29 @@ Used Supabase Realtime subscription with `postgres_changes` and refetched bookma
 **Solution:**  
 Enabled Row Level Security (RLS) and added policy:
 
-```sql
-auth.uid() = user_id
+Policies used:
+
+- SELECT → auth.uid() = user_id  
+- INSERT → auth.uid() = user_id  
+- DELETE → auth.uid() = user_id
+
+---
+
+## Local Setup
+
+1. Clone the repository
+
+git clone https://github.com/PraveenGPK1206/Smart-Bookmark-App
+
+2. Install dependencies
+
+npm install
+
+3. Create .env.local file and add:
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url  
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+4. Run the project
+
+npm run dev
